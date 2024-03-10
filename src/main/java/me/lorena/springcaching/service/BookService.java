@@ -2,6 +2,8 @@ package me.lorena.springcaching.service;
 
 import me.lorena.springcaching.dto.BookDTO;
 
+import java.util.List;
+
 public interface BookService {
     BookDTO addBook(BookDTO book);
 
@@ -10,4 +12,6 @@ public interface BookService {
     BookDTO getBook(long id);
 
     String deleteBook(long id);
+
+    List<BookDTO> getAllBooks();
 }
