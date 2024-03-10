@@ -1,0 +1,17 @@
+server:
+  port: 1337
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/LIBRARY
+    username: ${user}
+    password: ${password}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
