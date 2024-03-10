@@ -45,7 +45,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    @Cacheable(cacheNames = "books", key = "#id")
+    @Cacheable(cacheNames = "books", key = "#id", sync = true)
     public BookDTO getBook(long id) {
         log.info("fetching book from db");
         Optional<Book> book = bookRepository.findById(id);
